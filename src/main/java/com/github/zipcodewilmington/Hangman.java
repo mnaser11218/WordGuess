@@ -15,28 +15,7 @@ public class Hangman {
 
     public static void main(String[] args){
 Main main = new Main();
-        System.out.println("helo");
-testings();
         WordGuess wordGuess = new WordGuess();
-        //System.out.println(Arrays.toString(wordGuess.getNames()));
-//        String wordChoice = wordGuess.randomWord();
-//        System.out.println(wordChoice);
-//        System.out.println(wordGuess.stringToArray(wordChoice));
-//        System.out.println(wordGuess.playersLettersArray());
-       // wordGuess.runGame();
-        //System.out.println(wordGuess.getPlayersWordArray());
         wordGuess.runGame();
-
-
-
-
     }
-
-    private static void testings(){
-        System.out.println("testing");
-    }
-
-
-
-
 }

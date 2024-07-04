@@ -52,9 +52,6 @@ private boolean playGame = false;
         return playersLetters;
     }
 
-//    public void setPlayersLetters(char[] playersLetters) {
-//        this.playersLetters = playersLetters;
-//    }
     public void setPlayersLetters(int index, char letter) {
 
         this.playersLetters[index] = letter;
@@ -81,33 +78,25 @@ private boolean playGame = false;
         int limit =1;
         int chances =0;
         boolean closeApp = false;
-        System.out.println("your word is : " + randomWord());
+       randomWord();
         stringToArray();
         playersLettersArray();
-        System.out.println(getPlayersWordArray());
+        System.out.println(getPlayersLetters());
         limit = getPlayersWordArray().length;
 
 
         while (chances != limit) {
-
             System.out.println("chances completed: " + chances + " chances left: " + (limit - chances));
-            //System.out.println(getPlayersLetters());
-            //playersLettersArray();
-
-
             System.out.println("Please enter your first letter: ");
             String letter = scanner.nextLine();
             System.out.println("your letter is: " + letter);
-//        if(Chars.contains(getPlayersWordArray(), letter.charAt(0))){
-//            System.out.println("your letter is included");
-//        }
+            System.out.println(getPlayersLetters());
             if ((new String(getPlayersWordArray()).contains(letter))) {
                 int index = new String(getPlayersWordArray()).indexOf(letter);
                 //setPlayersLetters();
                 System.out.println(index);
                 setPlayersLetters(index, letter.charAt(0));
                 System.out.println(getPlayersLetters());
-
 
             }
 
